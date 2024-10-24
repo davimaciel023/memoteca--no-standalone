@@ -31,6 +31,7 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
+              "src/assets/imagens",
               {
                 "glob": "**/*",
                 "input": "public"
@@ -107,5 +108,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "6578fbb1-1d04-438a-ab2b-abc4aa67d6b5"
   }
 }
