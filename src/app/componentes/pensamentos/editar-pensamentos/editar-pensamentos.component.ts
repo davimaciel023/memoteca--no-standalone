@@ -1,22 +1,21 @@
+import { Router, ActivatedRoute } from '@angular/router';
+import { PensamentoService } from './../pensamento.service';
 import { Pensamento } from './../pensamento';
-import { Component } from '@angular/core';
-import { PensamentoService } from '../pensamento.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-editar-pensamentos',
+  selector: 'app-editar-pensamento',
   templateUrl: './editar-pensamentos.component.html',
-  styleUrl: './editar-pensamentos.component.css'
+  styleUrls: ['./editar-pensamentos.component.css']
 })
-export class EditarPensamentosComponent {
+export class EditarPensamentoComponent implements OnInit {
 
   pensamento: Pensamento = {
     id: 0,
     conteudo: '',
     autoria: '',
-    modelo: '',
+    modelo: ''
   }
-
 
   constructor(
     private service: PensamentoService,
@@ -24,17 +23,18 @@ export class EditarPensamentosComponent {
     private route: ActivatedRoute
   ) { }
 
-  ngOnInit(): void{
+  ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id')
     this.service.buscarPorId(parseInt(id!)).subscribe((pensamento) => {
       this.pensamento = pensamento
     })
-
   }
+
   editarPensamento() {
     this.service.editar(this.pensamento).subscribe(() => {
       this.router.navigate(['/listarPensamento'])
     })
+
   }
 
   cancelar() {
@@ -42,4 +42,3 @@ export class EditarPensamentosComponent {
   }
 
 }
-

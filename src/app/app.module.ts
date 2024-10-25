@@ -8,9 +8,10 @@ import { CabecalhoComponent } from './componentes/cabecalho/cabecalho.component'
 import { RodapeComponent } from './componentes/rodape/rodape.component';
 import { CriarPensamentosComponent } from './componentes/pensamentos/criar-pensamentos/criar-pensamentos.component';
 import { ListarPensamentosComponent } from './componentes/pensamentos/listar-pensamentos/listar-pensamentos.component';
-import { Router, RouterModule } from '@angular/router';
-import { EditarPensamentosComponent } from './componentes/pensamentos/editar-pensamentos/editar-pensamentos.component';
+import { RouterModule } from '@angular/router';
+import { EditarPensamentoComponent } from './componentes/pensamentos/editar-pensamentos/editar-pensamentos.component';
 import { ExcluirPensamentosComponent } from './componentes/pensamentos/excluir-pensamentos/excluir-pensamentos.component';
+import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,7 @@ import { ExcluirPensamentosComponent } from './componentes/pensamentos/excluir-p
     RodapeComponent,
     CriarPensamentosComponent,
     ListarPensamentosComponent,
-    EditarPensamentosComponent,
+    EditarPensamentoComponent,
     ExcluirPensamentosComponent,
     PensamentoComponent
   ],
@@ -26,10 +27,11 @@ import { ExcluirPensamentosComponent } from './componentes/pensamentos/excluir-p
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [
-    provideClientHydration()
+    provideHttpClient(withFetch())
   ],
   bootstrap: [AppComponent]
 })
