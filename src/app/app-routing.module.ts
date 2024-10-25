@@ -20,11 +20,11 @@ const routes: Routes = [
     component: CriarPensamentosComponent
   },
   {
-    path: 'editarPensamento',
+    path: 'pensamentos/editarPensamento/:id',
     component: EditarPensamentosComponent
   },
   {
-    path: 'excluirPensamento',
+    path: 'pensamentos/excluirPensamento/:id',
     component: ExcluirPensamentosComponent
   }
 ];

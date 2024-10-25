@@ -1,3 +1,4 @@
+import { PensamentoComponent } from './componentes/pensamentos/pensamento/pensamento.component';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
@@ -10,8 +11,6 @@ import { ListarPensamentosComponent } from './componentes/pensamentos/listar-pen
 import { Router, RouterModule } from '@angular/router';
 import { EditarPensamentosComponent } from './componentes/pensamentos/editar-pensamentos/editar-pensamentos.component';
 import { ExcluirPensamentosComponent } from './componentes/pensamentos/excluir-pensamentos/excluir-pensamentos.component';
-import { PensamentoComponent } from './componetes/pensamentos/pensamento/pensamento.component';
-
 @NgModule({
   declarations: [
     AppComponent,

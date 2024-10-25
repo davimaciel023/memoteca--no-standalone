@@ -16,7 +16,7 @@ export class PensamentoService {
     return this.http.get<Pensamento[]>(this.API)
   }
 
-  criar(pensamento: Pensamento): Observable<Pensamento>: Observable<Pensamento> {
+  criar(pensamento: Pensamento): Observable<Pensamento> {
     return this.http.post<Pensamento>(this.API, pensamento)
   }
 
