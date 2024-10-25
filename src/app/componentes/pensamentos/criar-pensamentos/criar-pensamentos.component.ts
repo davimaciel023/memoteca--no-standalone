@@ -9,11 +9,6 @@ import { Pensamento } from '../pensamento';
   styleUrl: './criar-pensamentos.component.css'
 })
 export class CriarPensamentosComponent {
-  constructor (
-    // private router: Router
-  ) { }
-
-  ngOnInit(): void {}
 
   pensamento: Pensamento = {
 
@@ -27,8 +22,7 @@ export class CriarPensamentosComponent {
     private router: Router
   ) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   criarPensamento() {
     this.service.criar(this.pensamento).subscribe(() => {
