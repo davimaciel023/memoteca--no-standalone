@@ -10,6 +10,7 @@ import { ListarPensamentosComponent } from './componentes/pensamentos/listar-pen
 import { Router, RouterModule } from '@angular/router';
 import { EditarPensamentosComponent } from './componentes/pensamentos/editar-pensamentos/editar-pensamentos.component';
 import { ExcluirPensamentosComponent } from './componentes/pensamentos/excluir-pensamentos/excluir-pensamentos.component';
+import { PensamentoComponent } from './componetes/pensamentos/pensamento/pensamento.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ExcluirPensamentosComponent } from './componentes/pensamentos/excluir-p
     CriarPensamentosComponent,
     ListarPensamentosComponent,
     EditarPensamentosComponent,
-    ExcluirPensamentosComponent
+    ExcluirPensamentosComponent,
+    PensamentoComponent
   ],
   imports: [
     BrowserModule,
