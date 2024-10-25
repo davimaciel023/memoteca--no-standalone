@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './excluir-pensamentos.component.css'
 })
 export class ExcluirPensamentosComponent {
+  excluirPensamento(){
 
+  }
+  cancelar(){
+
+  }
 }
