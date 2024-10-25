@@ -23,4 +23,23 @@ export class EditarPensamentosComponent {
     private router: Router,
     private route: ActivatedRoute
   ) { }
+
+  ngOnInit(): void{
+    const id = this.route.snapshot.paramMap.get('id')
+    this.service.buscarPorId(parseInt(id!)).subscribe((pensamento) => {
+      this.pensamento = pensamento
+    })
+
+  }
+  editarPensamento() {
+    this.service.editar(this.pensamento).subscribe(() => {
+      this.router.navigate(['/listarPensamento'])
+    })
+  }
+
+  cancelar() {
+    this.router.navigate(['/listarPensamento'])
+  }
+
 }
+
