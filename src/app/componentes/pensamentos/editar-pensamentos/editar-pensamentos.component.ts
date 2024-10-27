@@ -22,32 +22,28 @@ export class EditarPensamentoComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.formulario = this.formBuilder.group({
-      conteudo: ['', Validators.compose([Validators.required, Validators.pattern(/(.|\s)*\S(.|s)*/)])],
-      autoria: ['', Validators.compose([Validators.required, Validators.minLength(3)])],
-      modelo: ['modelo1']
-    });
     const id = this.route.snapshot.paramMap.get('id')
     this.service.buscarPorId(parseInt(id!)).subscribe((pensamento) => {
-      this.formulario.patchValue(pensamento);
+      this.formulario = this.formBuilder.group({
+        id: [pensamento.id],
+        conteudo: [pensamento.conteudo, Validators.compose([Validators.required, Validators.pattern(/(.|\s)*\S(.|s)*/)])],
+        autoria: [pensamento.autoria, Validators.compose([Validators.required, Validators.minLength(3)])],
+        modelo: [pensamento.modelo]
+      })
     })
   }
 
   editarPensamento() {
-    console.log(this.formulario.get('autoria')?.errors)
-    if(this.formulario.valid){
-      this.service.editar(this.formulario.value).subscribe(() => {
-        this.router.navigate(['/listarPensamento'])
+    this.service.editar(this.formulario.value).subscribe(() => {
+      this.router.navigate(['/listarPensamento'])
       })
-
     }
-  }
 
   cancelar() {
     this.router.navigate(['/listarPensamento'])
   }
 
-  habilitarBotao() {
+  habilitarBotao(): string {
     if(this.formulario.valid){
       return 'botao'
     } else{
