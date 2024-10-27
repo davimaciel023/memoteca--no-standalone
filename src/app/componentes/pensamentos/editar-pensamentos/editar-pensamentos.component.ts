@@ -1,8 +1,7 @@
 import { Router, ActivatedRoute } from '@angular/router';
 import { PensamentoService } from './../pensamento.service';
-import { Pensamento } from './../pensamento';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-editar-pensamento',
@@ -12,7 +11,6 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class EditarPensamentoComponent implements OnInit {
 
   formulario!: FormGroup;
-
 
   constructor(
     private service: PensamentoService,
@@ -26,8 +24,14 @@ export class EditarPensamentoComponent implements OnInit {
     this.service.buscarPorId(parseInt(id!)).subscribe((pensamento) => {
       this.formulario = this.formBuilder.group({
         id: [pensamento.id],
-        conteudo: [pensamento.conteudo, Validators.compose([Validators.required, Validators.pattern(/(.|\s)*\S(.|s)*/)])],
-        autoria: [pensamento.autoria, Validators.compose([Validators.required, Validators.minLength(3)])],
+        conteudo: [pensamento.conteudo, Validators.compose([
+          Validators.required,
+          Validators.pattern(/(.|\s)*\S(.|\s)*/)
+        ])],
+        autoria: [pensamento.autoria, Validators.compose([
+          Validators.required,
+          Validators.minLength(3)
+        ])],
         modelo: [pensamento.modelo]
       })
     })
@@ -36,18 +40,17 @@ export class EditarPensamentoComponent implements OnInit {
   editarPensamento() {
     this.service.editar(this.formulario.value).subscribe(() => {
       this.router.navigate(['/listarPensamento'])
-      })
-    }
+    })
+  }
 
   cancelar() {
     this.router.navigate(['/listarPensamento'])
   }
 
   habilitarBotao(): string {
-    if(this.formulario.valid){
-      return 'botao'
-    } else{
-      return 'botao__desabilitado'
+    if(this.formulario.valid) {
+      return "botao"
     }
+    else return "botao__desabilitado"
   }
 }
