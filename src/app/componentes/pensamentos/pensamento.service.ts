@@ -1,7 +1,7 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 import { Pensamento } from './pensamento';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +12,7 @@ export class PensamentoService {
 
   constructor(private http: HttpClient) { }
 
-  listar(): Observable<Pensamento[]>{
+  listar(): Observable<Pensamento[]> {
     return this.http.get<Pensamento[]>(this.API)
   }
 
@@ -35,4 +35,5 @@ export class PensamentoService {
     const url = `${this.API}/${id}`
     return this.http.get<Pensamento>(url)
   }
+
 }

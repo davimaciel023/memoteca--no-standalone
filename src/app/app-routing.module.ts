@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ListarPensamentosComponent } from './componentes/pensamentos/listar-pensamentos/listar-pensamentos.component';
-import { CriarPensamentosComponent } from './componentes/pensamentos/criar-pensamentos/criar-pensamentos.component';
+import { ListarPensamentoComponent } from './componentes/pensamentos/listar-pensamentos/listar-pensamentos.component';
+import { CriarPensamentoComponent } from './componentes/pensamentos/criar-pensamentos/criar-pensamentos.component';
 import { EditarPensamentoComponent } from './componentes/pensamentos/editar-pensamentos/editar-pensamentos.component';
-import { ExcluirPensamentosComponent } from './componentes/pensamentos/excluir-pensamentos/excluir-pensamentos.component';
+import { ExcluirPensamentoComponent } from './componentes/pensamentos/excluir-pensamentos/excluir-pensamentos.component';
 
 const routes: Routes = [
   {
@@ -13,11 +13,11 @@ const routes: Routes = [
   },
   {
     path: 'listarPensamento',
-    component: ListarPensamentosComponent
+    component: ListarPensamentoComponent
   },
   {
     path: 'criarPensamento',
-    component: CriarPensamentosComponent
+    component: CriarPensamentoComponent
   },
   {
     path: 'pensamentos/editarPensamento/:id',
@@ -25,7 +25,7 @@ const routes: Routes = [
   },
   {
     path: 'pensamentos/excluirPensamento/:id',
-    component: ExcluirPensamentosComponent
+    component: ExcluirPensamentoComponent
   }
 ];
 
