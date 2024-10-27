@@ -12,6 +12,7 @@ import { RouterModule } from '@angular/router';
 import { EditarPensamentoComponent } from './componentes/pensamentos/editar-pensamentos/editar-pensamentos.component';
 import { ExcluirPensamentoComponent } from './componentes/pensamentos/excluir-pensamentos/excluir-pensamentos.component';
 import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
+import { BotaoCarregarMaisComponent } from './componentes/pensamentos/listar-pensamentos/botao-carregar-mais/botao-carregar-mais.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,8 @@ import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/
     ListarPensamentoComponent,
     EditarPensamentoComponent,
     ExcluirPensamentoComponent,
-    PensamentoComponent
+    PensamentoComponent,
+    BotaoCarregarMaisComponent
   ],
   imports: [
     BrowserModule,

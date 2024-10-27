@@ -51,6 +51,9 @@ export class EditarPensamentoComponent implements OnInit {
     if(this.formulario.valid) {
       return "botao"
     }
-    else return "botao__desabilitado"
+    else
+      return "botao__desabilitado"
+
+    }
   }
-}
+
