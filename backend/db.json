@@ -5,7 +5,7 @@
       "conteudo": "pensamento de teste",
       "autoria": "dev angular",
       "modelo": "modelo2",
-      "favorito": false
+      "favorito": true
     },
     {
       "id": "af09",
@@ -26,7 +26,7 @@
       "conteudo": "fazendo um teste",
       "autoria": "test",
       "modelo": "modelo2",
-      "favorito": false
+      "favorito": true
     },
     {
       "id": "3cd3",
