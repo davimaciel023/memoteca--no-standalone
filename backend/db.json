@@ -4,43 +4,50 @@
       "id": "06f5",
       "conteudo": "pensamento de teste",
       "autoria": "dev angular",
-      "modelo": "modelo2"
+      "modelo": "modelo2",
+      "favorito": false
     },
     {
       "id": "af09",
       "conteudo": "Formulário reativo",
       "autoria": "Angular",
-      "modelo": "modelo1"
+      "modelo": "modelo1",
+      "favorito": false
     },
     {
       "id": "eb30",
       "conteudo": "asdas",
       "autoria": "aasda",
-      "modelo": "modelo1"
+      "modelo": "modelo1",
+      "favorito": false
     },
     {
       "id": "c2c6",
       "conteudo": "fazendo um teste",
       "autoria": "test",
-      "modelo": "modelo2"
+      "modelo": "modelo2",
+      "favorito": false
     },
     {
       "id": "3cd3",
       "conteudo": "dad3",
       "autoria": "assdqw",
-      "modelo": "modelo3"
+      "modelo": "modelo3",
+      "favorito": false
     },
     {
       "id": "9713",
       "conteudo": "asdaede",
       "autoria": "asasde",
-      "modelo": "modelo3"
+      "modelo": "modelo3",
+      "favorito": false
     },
     {
       "id": "3629",
       "conteudo": "oi",
       "autoria": "tes",
-      "modelo": "modelo3"
+      "modelo": "modelo3",
+      "favorito": false
     }
   ]
 }
