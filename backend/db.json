@@ -1,12 +1,6 @@
 {
   "pensamentos": [
     {
-      "id": "7294",
-      "conteudo": "Eu não estou acreditando numa coisa dessa",
-      "autoria": "Davi",
-      "modelo": "modelo3"
-    },
-    {
       "id": "06f5",
       "conteudo": "pensamento de teste",
       "autoria": "dev angular",
@@ -29,12 +23,6 @@
       "conteudo": "fazendo um teste",
       "autoria": "test",
       "modelo": "modelo2"
-    },
-    {
-      "id": "6456",
-      "conteudo": "Eu não estou acreditando numa coisa dessa",
-      "autoria": "Davi",
-      "modelo": "modelo1"
     },
     {
       "id": "3cd3",
