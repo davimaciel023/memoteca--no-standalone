@@ -15,32 +15,11 @@
       "favorito": false
     },
     {
-      "id": "eb30",
-      "conteudo": "asdas",
-      "autoria": "aasda",
-      "modelo": "modelo1",
-      "favorito": false
-    },
-    {
       "id": "c2c6",
       "conteudo": "fazendo um teste",
       "autoria": "test",
       "modelo": "modelo2",
       "favorito": true
-    },
-    {
-      "id": "3cd3",
-      "conteudo": "dad3",
-      "autoria": "assdqw",
-      "modelo": "modelo3",
-      "favorito": false
-    },
-    {
-      "id": "9713",
-      "conteudo": "asdaede",
-      "autoria": "asasde",
-      "modelo": "modelo3",
-      "favorito": false
     },
     {
       "id": "3629",
